@@ -1,4 +1,4 @@
-# Connect Sphere
+# Connect Sphere (where connecting the people)
 
 > To foster meaningful connections and facilitate seamless communication among individuals.
 

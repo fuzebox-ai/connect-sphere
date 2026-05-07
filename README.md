@@ -43,6 +43,16 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 | `npm run preview` | Preview the production build locally |
 | `npm run lint` | Run ESLint |
 
+## Features
+
+### 🌗 Dark / Light Mode Toggle
+
+A theme toggle button is fixed to the **top-right corner** of every page. Clicking it switches between **dark mode** (default) and **light mode** instantly.
+
+- The toggle is always visible and accessible via keyboard (`focus-visible` outline support).
+- Theme state is applied via a `data-theme` attribute on `<html>`, driving CSS custom properties (`--bg`, `--color`, etc.) for a smooth, flicker-free transition.
+- Dark mode is the default theme; the button displays a ☀️ sun icon in dark mode and a 🌙 moon icon in light mode, along with a matching label.
+
 ## Tech Stack
 
 - [React 18](https://react.dev/) — UI library
@@ -56,9 +66,9 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 connect-sphere/
 ├── public/          # Static assets
 ├── src/
-│   ├── App.tsx      # Root component
-│   ├── App.css      # App-level styles
-│   ├── index.css    # Global styles
+│   ├── App.tsx      # Root component (incl. theme toggle)
+│   ├── App.css      # App-level styles (incl. toggle button styles)
+│   ├── index.css    # Global styles & CSS theme variables
 │   └── main.tsx     # Entry point
 ├── index.html       # HTML template
 ├── package.json

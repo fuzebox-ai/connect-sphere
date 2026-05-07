@@ -6,26 +6,48 @@
   padding: 0;
 }
 
+/* ── Dark theme (default) ── */
+:root,
+[data-theme='dark'] {
+  --bg: #242424;
+  --color: rgba(255, 255, 255, 0.87);
+  --btn-bg: #2e2e2e;
+  --btn-bg-hover: #3a3a3a;
+  --btn-border: #444;
+  --btn-color: rgba(255, 255, 255, 0.87);
+}
+
+/* ── Light theme ── */
+[data-theme='light'] {
+  --bg: #f9f9f9;
+  --color: #1a1a1a;
+  --btn-bg: #ffffff;
+  --btn-bg-hover: #f0f0f0;
+  --btn-border: #d0d0d0;
+  --btn-color: #1a1a1a;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
-}
-
-body {
-  min-width: 320px;
-  min-height: 100vh;
 }
